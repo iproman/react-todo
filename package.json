@@ -1,0 +1,23 @@
+{
+  "name": "react-todo_",
+  "version": "1.0.0",
+  "description": "React todo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iproman/react-todo.git"
+  },
+  "keywords": [
+    "react",
+    "todo"
+  ],
+  "author": "iproman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iproman/react-todo/issues"
+  },
+  "homepage": "https://github.com/iproman/react-todo#readme"
+}
