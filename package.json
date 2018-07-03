@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/iproman/react-todo/issues"
   },
-  "homepage": "https://github.com/iproman/react-todo#readme"
+  "homepage": "https://github.com/iproman/react-todo#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
 }
