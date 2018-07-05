@@ -44,7 +44,7 @@ var TodoComponent = module.exports = createReactClass({
         var todos = this.state.todos;
         todos = todos.map(function (item, index) {
             return (
-                <li>{item}</li>
+                <TodoItem item={item} key={index}/>
             )
         })
 
@@ -59,6 +59,19 @@ var TodoComponent = module.exports = createReactClass({
             </div>
         );
     } // render
+});
+
+// Create TodoItem component
+var TodoItem = module.exports = createReactClass({
+    render: function () {
+        return (
+            <li>
+                <div className="todo-item">
+                    <span className="item-name">{this.props.item}</span>
+                </div>
+            </li>
+        );
+    }
 });
 
 // Put component into html page
