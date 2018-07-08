@@ -18,7 +18,7 @@ var TodoComponent = module.exports = createReactClass({
             return (
                 <TodoItem item={item} key={index} onDelete={this.onDelete = this.onDelete.bind(this)}/>
             );
-        });
+        }.bind(this));
 
 
         return (
