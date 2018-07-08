@@ -5,34 +5,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
 
-// Create component
-// var TodoComponent = React.createClass({
-//     render: function () {
-//         return (
-//             <h1>Hello World</h1>
-//         );
-//     }
-// });
-
-//////////// props
-// var TodoComponent = module.exports = createReactClass({
-//     render: function () {
-//         return (
-//             <div>
-//                 <p>
-//                     <strong>Cheese name: </strong> {this.props.cheese.name}
-//                 </p>
-//                 <p>
-//                     <strong>Cheese smell factor: </strong> {this.props.cheese.smellFactor}
-//                 </p>
-//                 <p>
-//                     <strong>Cheese price: </strong> {this.props.cheese.price}
-//                 </p>
-//             </div>
-//         );
-//     }
-// });
-
 //////////// state
 var TodoComponent = module.exports = createReactClass({
     getInitialState: function () {
@@ -44,9 +16,9 @@ var TodoComponent = module.exports = createReactClass({
         var todos = this.state.todos;
         todos = todos.map(function (item, index) {
             return (
-                <TodoItem item={item} key={index}/>
-            )
-        })
+                <TodoItem item={item} key={index} onDelete={this.onDelete = this.onDelete.bind(this)}/>
+            );
+        });
 
 
         return (
@@ -58,19 +30,38 @@ var TodoComponent = module.exports = createReactClass({
                 <listComponent todos={this.state.todos}/>
             </div>
         );
-    } // render
+    }, // render
+
+    // Custom functions
+
+    onDelete: function (item) {
+        var updatedTodos = this.state.todos.filter(function(val,index){
+            return item !== val;
+        });
+        this.setState({
+            todos: updatedTodos
+        });
+    }
 });
 
 // Create TodoItem component
 var TodoItem = module.exports = createReactClass({
+
+
     render: function () {
         return (
             <li>
                 <div className="todo-item">
                     <span className="item-name">{this.props.item}</span>
+                    <span className="item-delete" onClick={this.handleDelete}> x </span>
                 </div>
             </li>
         );
+    },
+//
+    // Custom function
+    handleDelete: function () {
+        this.props.onDelete(this.props.item);
     }
 });
 
