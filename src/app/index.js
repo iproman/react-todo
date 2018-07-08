@@ -25,13 +25,11 @@ var TodoComponent = module.exports = createReactClass({
             );
         }.bind(this));
 
-
         return (
             <div id="todo-list">
                 <p>The busiest people have the most leasure...</p>
-                <ul>
-                    {todos}
-                </ul>
+                <ul> {todos}</ul>
+                <AddItem onAdd={this.onAdd}/>
                 <listComponent todos={this.state.todos}/>
             </div>
         );
@@ -46,6 +44,14 @@ var TodoComponent = module.exports = createReactClass({
         this.setState({
             todos: updatedTodos
         });
+    },
+
+    onAdd: function (item) {
+        var updatedTodos = this.state.todos;
+        updatedTodos.push(item);
+        this.setState({
+            todos: updatedTodos
+        })
     }
 });
 
