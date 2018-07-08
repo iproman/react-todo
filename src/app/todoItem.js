@@ -1,6 +1,7 @@
 
 var React = require('react');
 var createReactClass = require('create-react-class');
+require('./css/todoItem.css');
 
 // Create TodoItem component
 var TodoItem = module.exports = createReactClass({

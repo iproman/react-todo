@@ -4,6 +4,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
+require('./css/index.css');
 
 // Module requires
 var TodoItem = require('./todoItem');
