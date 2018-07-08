@@ -8,6 +8,7 @@ require('./css/index.css');
 
 // Module requires
 var TodoItem = require('./todoItem');
+var AddItem = require('./addItem');
 
 //////////// state
 var TodoComponent = module.exports = createReactClass({
