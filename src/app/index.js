@@ -5,11 +5,25 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
 require('./css/index.css');
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 // Module requires
 var TodoItem = require('./todoItem');
 var AddItem = require('./addItem');
+var About = require('./about');
 
+var App = module.exports = React.createClass({
+    render: function () {
+        return (
+            <Router>
+                <Switch>
+                    <Route exact={true} path={'/'} component={TodoComponent}></Route>
+                    <Route path={'/about'} component={About}></Route>
+                </Switch>
+            </Router>
+        );
+    }
+});
 //////////// state
 var TodoComponent = module.exports = createReactClass({
     getInitialState: function () {
@@ -38,7 +52,7 @@ var TodoComponent = module.exports = createReactClass({
     // Custom functions
 
     onDelete: function (item) {
-        var updatedTodos = this.state.todos.filter(function(val,index){
+        var updatedTodos = this.state.todos.filter(function (val, index) {
             return item !== val;
         });
         this.setState({
@@ -73,6 +87,5 @@ var TodoComponent = module.exports = createReactClass({
 });
 
 
-
 // Put component into html page
-ReactDOM.render(<TodoComponent/>, document.getElementById('todo-wrapper'));
+ReactDOM.render(<App/>, document.getElementById('todo-wrapper'));
