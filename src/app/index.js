@@ -41,6 +41,7 @@ var TodoComponent = module.exports = createReactClass({
 
         return (
             <div id="todo-list">
+                <Link to={'/about'}>About</Link>
                 <p>The busiest people have the most leasure...</p>
                 <ul> {todos}</ul>
                 <AddItem onAdd={this.onAdd}/>
