@@ -1,12 +1,16 @@
-# react-todo
-React to do app.
+# cli-project
 
+> A React todo project
 
-Here is everything from the lesson where you came from.
-Continue following the lesson and compare with my fixes..
+## Build Setup
 
-##### Run this
-Console:
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:1234/
 npm start
+```
 
-Browser: http://localhost:1234/
+## License
+MIT
