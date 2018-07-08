@@ -1,6 +1,8 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
 
+require('./css/addItem.css');
+
 var AddItem = module.exports = createReactClass({
    render: function () {
        return(
