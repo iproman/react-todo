@@ -12,7 +12,7 @@ var TodoItem = require('./todoItem');
 var AddItem = require('./addItem');
 var About = require('./about');
 
-var App = module.exports = React.createClass({
+var App = module.exports = createReactClass({
     render: function () {
         return (
             <Router>
