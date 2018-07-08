@@ -71,20 +71,20 @@ var TodoComponent = module.exports = createReactClass({
 
     // Lifecycle functions
     // It's called before the render DOM
-    componentWillMount: function () {
-        console.log('componentWillMount');
-    },
+    // componentWillMount: function () {
+    //     console.log('componentWillMount');
+    // },
 
     // It's called before the render DOM and after componentWillMount
-    componentDidMount: function () {
-        console.log('componentDidMount');
-        // any grabbing of external data
-    },
+    // componentDidMount: function () {
+    //     console.log('componentDidMount');
+    //     // any grabbing of external data
+    // },
 
     // It's called after the render DOM and update initialState
-    componentWillUpdate: function () {
-        console.log('componentWillUpdate');
-    }
+    // componentWillUpdate: function () {
+    //     console.log('componentWillUpdate');
+    // }
 });
 
 
