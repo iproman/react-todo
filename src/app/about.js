@@ -8,6 +8,7 @@ var About = module.exports = createReactClass({
            <div>
                <Link to={'/'}>Home</Link>
                <h2>All about me</h2>
+               <p>Awesome, here is my first project using React</p>
            </div>
        );
    }
